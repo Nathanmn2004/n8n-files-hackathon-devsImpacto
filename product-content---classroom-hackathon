@@ -1,7 +1,7 @@
 [
   {
     "createdAt": "2025-11-08T23:27:01.532Z",
-    "updatedAt": "2025-11-09T13:33:15.201Z",
+    "updatedAt": "2025-11-09T15:09:12.653Z",
     "id": "M5mq4UZZmushXF0p",
     "name": "Product Content - Classroom hackathon",
     "active": false,
@@ -19,8 +19,8 @@
         "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
         "typeVersion": 1.2,
         "position": [
-          384,
-          -208
+          352,
+          -112
         ],
         "id": "6e92db05-f530-438b-93b2-ed8d1f6de2a6",
         "name": "OpenAI Chat Model",
@@ -65,7 +65,7 @@
         "type": "n8n-nodes-base.formTrigger",
         "typeVersion": 2.2,
         "position": [
-          176,
+          128,
           -384
         ],
         "id": "1e858680-90d3-42d8-8581-cd0b3f0f1a8a",
@@ -75,14 +75,14 @@
       {
         "parameters": {
           "sessionIdType": "customKey",
-          "sessionKey": "={{ $workflow.id }}",
+          "sessionKey": "=1",
           "contextWindowLength": 1
         },
         "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
         "typeVersion": 1.3,
         "position": [
-          480,
-          -224
+          448,
+          -32
         ],
         "id": "c1e9e814-13b4-43b3-82b2-96c46e8f58ce",
         "name": "Simple Memory"
@@ -219,7 +219,7 @@
       {
         "parameters": {
           "sessionIdType": "customKey",
-          "sessionKey": "={{ $workflow.id }}",
+          "sessionKey": "=1",
           "contextWindowLength": 1
         },
         "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
@@ -298,7 +298,7 @@
               },
               {
                 "name": "quality",
-                "value": "low"
+                "value": "medium"
               }
             ]
           },
@@ -366,7 +366,7 @@
               },
               {
                 "name": "quality",
-                "value": "low"
+                "value": "medium"
               }
             ]
           },
@@ -434,7 +434,7 @@
               },
               {
                 "name": "quality",
-                "value": "low"
+                "value": "medium"
               }
             ]
           },
@@ -598,7 +598,7 @@
       {
         "parameters": {
           "sessionIdType": "customKey",
-          "sessionKey": "={{ $workflow.id }}",
+          "sessionKey": "=1",
           "contextWindowLength": 1
         },
         "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
@@ -788,7 +788,7 @@
               {
                 "id": "3122fa8b-6d11-4c5c-be0c-d58b0a3329c0",
                 "leftValue": "={{ $('Aggregate').item.json.name }}",
-                "rightValue": "={{ $('Get a workflow').item.json.name.replace(/\\s+/g, '-').toLowerCase() }}-",
+                "rightValue": "=product-content---classroom-hackathon",
                 "operator": {
                   "type": "array",
                   "operation": "contains",
@@ -830,7 +830,7 @@
         "type": "n8n-nodes-base.github",
         "typeVersion": 1.1,
         "position": [
-          5632,
+          5664,
           -720
         ],
         "id": "0589d691-a9c5-43c0-98eb-4a3729f9b55e",
@@ -1313,8 +1313,8 @@
       "templateCredsSetupCompleted": true
     },
     "pinData": {},
-    "versionId": "69d76c99-6972-46ad-a7fe-bfeef716ba5f",
-    "triggerCount": 0,
+    "versionId": "e46bc5e7-3a05-42e1-82fd-8c3340a0d960",
+    "triggerCount": 2,
     "shared": [
       {
         "createdAt": "2025-11-08T23:27:01.532Z",
